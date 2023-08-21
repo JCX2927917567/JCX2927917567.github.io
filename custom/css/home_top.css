@@ -177,10 +177,10 @@
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
     .recent-post-top .recent-post-item {
         margin-right:0;
-        margin-bottom: .5rem
+        margin-bottom: 0.4rem;
     }
 
     .recent-post-top .recent-post-item:active {
@@ -216,7 +216,7 @@ span.recent-post-top-text {
     left: 0
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
     .recent-post-top .recent-post-item:hover {
         border:var(--style-border-hover);
         box-shadow: var(--bywind-shadow-main);
@@ -269,7 +269,7 @@ span.recent-post-top-text {
     color: var(--bywind-fontcolor)
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
     .recent-post-top .recent-post-item:hover .recent-post-info a {
         color:var(--bywind-theme);
         transition: .3s
@@ -320,7 +320,7 @@ a.categoryButton i {
   transform: scale(1.0) rotate(15deg);
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   a.categoryButton:active {
     transform: scale(0.97);
   }
@@ -394,17 +394,21 @@ div#banners {
 .topGroup .todayCard {
     display: none;
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   .topGroup {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    height: calc(328px + 0.5rem);
-    overflow-y: scroll;
-    align-content: space-between;
+    height: calc(164px + 0.4rem);
+    overflow-y: hidden;
+    align-content: flex-start;
     width: calc(600px + 1.5rem);
     position: relative;
+  }
+
+  .topGroup.toScroll {
+    overflow-y: scroll !important;
   }
 
   .topGroup::-webkit-scrollbar {
@@ -617,7 +621,7 @@ div#banners {
     filter: blur(0)
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
     .categoryItem:hover i {
         transform:scale(1.03) rotate(0)
     }
@@ -638,7 +642,7 @@ div#banners {
     display: none
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
     .recent-post-top .categoryGroup {
         flex-direction:row;
         height: 24%
