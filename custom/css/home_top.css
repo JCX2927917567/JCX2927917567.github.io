@@ -728,7 +728,7 @@ a.categoryButton:hover {
         height: 100%;
         z-index: 1;
         top: 0;
-        left: 0;
+        left: calc(-1px - 0.4rem);
         background: var(--bywind-card-bg);
         border-radius: 12px;
         margin-left: 0.5rem;
