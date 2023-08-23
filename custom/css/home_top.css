@@ -372,7 +372,7 @@ a.categoryButton i {
 
   .recent-post-top .categoryGroup {
     min-width: 130px !important;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     margin-left: 1rem;
     max-height: 164px;
     overflow: hidden;
@@ -418,7 +418,7 @@ div#banners {
   div#bannerGroup {
     width: calc(100% - 600px - 2rem);
     margin-right: 0.5rem;
-    height: calc(328px + 0.5rem);
+    height: calc(328px + 1rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -724,14 +724,13 @@ a.categoryButton:hover {
 @media screen and (min-width: 1200px) {
     .topGroup .todayCard {
         position: absolute;
-        width: calc(600px + 1rem);
+        width: calc(600px + 1.5rem);
         height: 100%;
         z-index: 1;
         top: 0;
-        left: calc(-1px - 0.4rem);
+        left: 0;
         background: var(--bywind-card-bg);
         border-radius: 12px;
-        margin-left: 0.5rem;
         overflow: hidden;
         transition: 0.3s;
         display: flex;
@@ -839,4 +838,37 @@ i.hnfont {
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.sumGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sumGroup #swiperGroup {
+    width: calc(600px + 1.5rem);
+    height: calc(160px + 0.1rem);
+}
+
+.sumGroup #swiperGroup .recent-post-item {
+    height: 100% !important;
+}
+
+.sumGroup #swiperGroup .recent-post-item:hover {
+    transform: scale(1)
+}
+
+@media screen and (min-width: 600px) {
+    .sumGroup #swiperGroup .recent-post-item .blog-slider {
+        height: 100%;
+    }
+    .sumGroup #swiperGroup .recent-post-item .blog-slider__img {
+        height: 100%;
+    }
+}
+
+
+.recent-post-top #swiperGroup .recent-post-item {
+    margin-left: 0;
 }
