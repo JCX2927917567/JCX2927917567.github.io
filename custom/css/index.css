@@ -1,0 +1,114 @@
+/* 通用样式 */
+/* 修改主题原生样式 */
+
+/* 调整 */
+.layout {
+    max-width: 1400px;
+    padding: 20px 15px;
+}
+
+.recent-posts {
+    margin-top: 0 !important;
+}
+
+.layout>div:first-child {
+    flex: 1;
+}
+
+#page-header.not-top-img #nav {
+    box-shadow: none;
+}
+
+#aside-content {
+    max-width: 300px;
+}
+
+.hide-aside .layout > div:first-child {
+    width: 100% !important;
+}
+
+/* 导航条样式 */
+#category-bar {
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.recent-posts #category-bar {
+    box-shadow: var(--card-box-shadow);
+}
+
+#category-bar:hover {
+    border: 1px solid #0073ff;
+}
+
+#category-bar .category-bar-items {
+    height: 100%;
+    align-items: center;
+}
+
+#category-bar .category-bar-items .category-bar-item a {
+    padding: 0.4rem 1rem;
+}
+
+.category-bar-item.select a {
+    background: #0073ff;
+}
+
+.category-bar-item:hover a{
+    background: #0073ff;
+}
+
+/* 导航条在分类页面 */
+.category-in-bar {
+    align-items: center;
+}
+
+.category-in-bar #category-bar {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* 分页容器 */
+nav#pagination {
+    width: 100%;
+}
+
+/* 首页文章封面 */
+/* 描述性文字 */
+#recent-posts>.recent-post-item>.recent-post-info>.content {
+    display: -webkit-inline-box !important;
+}
+
+a.article-meta__tags::before {
+    content: "\f292";
+    font-size: 10px;
+    opacity: .4;
+    font-family: "Font Awesome 6 Free"
+}
+
+#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {
+    content: "";
+    white-space: pre;
+}
+
+a.article-meta__tags {
+    margin-right: 1rem;
+    font-size: 16px;
+}
+
+#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap {
+    position: relative;
+}
+
+#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .post-meta-date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+}
+
+#recent-posts>.recent-post-item>.recent-post-info>.article-title {
+    font-size: 1.6em !important;
+}

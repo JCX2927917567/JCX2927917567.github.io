@@ -868,7 +868,16 @@ i.hnfont {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .sumGroup #swiperGroup {
+        display: none;
+    }
+}
 
 .recent-post-top #swiperGroup .recent-post-item {
     margin-left: 0;
+}
+
+#swiperGroup .recent-post-item .blog-slider__img {
+    padding: 0;
 }

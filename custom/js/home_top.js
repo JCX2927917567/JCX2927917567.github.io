@@ -49,26 +49,3 @@ $(".topGroup").hover(
   }
 );
 
-
-// 检查屏幕宽度，并决定是否挂载元素
-function checkScreenSize() {
-  var screenWidth = $(window).width();
-  var element = $("#swiperGroup");
-
-  if (screenWidth < 1200) {
-    // 在小于或等于780px的屏幕上，挂载元素到容器A，移除元素从容器B
-    element.prependTo(".recent-posts");
-  } else {
-    // 在大于780px的屏幕上，挂载元素到容器B，移除元素从容器A
-    element.appendTo(".sumGroup");
-  }
-}
-
-// 初始检查屏幕大小
-checkScreenSize();
-
-// 监听窗口大小变化，实时更新元素挂载状态
-$(window).resize(function() {
-  checkScreenSize();
-});
-
