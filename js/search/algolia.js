@@ -115,7 +115,7 @@ window.addEventListener('load', () => {
               ? cutContent(result.content.value)
               : ''
         return `
-          <a href="${link}" class="algolia-hit-item-link">
+          <a href="${link}" class="algolia-hit-item-link" data-pjax-state="load">
           <span class="algolia-hits-item-title">${result.title.value || 'no-title'}</span>
           <p class="algolia-hit-item-content">${content}</p>
           </a>`
