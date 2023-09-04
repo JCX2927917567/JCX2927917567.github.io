@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>晶华笔影</title>
+  
+  <subtitle>把时光定格，用晶莹文字记录</subtitle>
+  <link href="https://blog.narctix.top/atom.xml" rel="self"/>
+  
+  <link href="https://blog.narctix.top/"/>
+  <updated>2023-08-19T13:19:13.124Z</updated>
+  <id>https://blog.narctix.top/</id>
+  
+  <author>
+    <name>Crystal</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>托尔斯泰</title>
+    <link href="https://blog.narctix.top/posts/9dc822d5.html"/>
+    <id>https://blog.narctix.top/posts/9dc822d5.html</id>
+    <published>2023-08-17T08:28:35.018Z</published>
+    <updated>2023-08-19T13:19:13.124Z</updated>
+    
+    
+    
+    
+    <category term="生活" scheme="https://blog.narctix.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="JavaScript" scheme="https://blog.narctix.top/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test1</title>
+    <link href="https://blog.narctix.top/posts/8ab2dce2.html"/>
+    <id>https://blog.narctix.top/posts/8ab2dce2.html</id>
+    <published>2023-08-17T08:28:27.267Z</published>
+    <updated>2023-08-19T13:19:04.005Z</updated>
+    
+    
+    
+    
+    <category term="Web" scheme="https://blog.narctix.top/categories/Web/"/>
+    
+    
+    <category term="美句" scheme="https://blog.narctix.top/tags/%E7%BE%8E%E5%8F%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS中的null与undefined</title>
+    <link href="https://blog.narctix.top/posts/33008.html"/>
+    <id>https://blog.narctix.top/posts/33008.html</id>
+    <published>2023-08-08T10:05:04.595Z</published>
+    <updated>2023-08-25T12:05:30.408Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在JavaScript中，null和undefined是两个常见的数据类型，但总是在使用时由于对两者区别不清而导致错误，今天就让我们一起来看看这两种类型的区别。</p><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>首先让我们来看看两者的定义：<br><strong>null</strong>是JavaScript中的一个特殊值，表示“空值”或“无值”。当我们想要表示某个变量不包含任何值时，就可以将其设置为null。<br><strong>undefined</strong>是JavaScript中的另一种特殊值，表示“未定义的值”。当我们声明一个变量但没有给它赋值时，该变量的值就是undefined。</p><h2 id="异同点"><a href="#异同点" class="headerlink" title="异同点"></a>异同点</h2><p>相同点：</p><ol><li>undefined和null被转换为布尔值的时候，两者都为false</li><li>undefined&#x3D;&#x3D;null，结果为true都表示一个空值，两者判断值相等上是一样的</li></ol><p>尽管<strong>null</strong>和<strong>undefined</strong>都表示“无值”，但它们之间还是有一些区别的。</p><p>不同点：</p><ol><li>null表示一个空对象指针，而undefined表示一个未定义的值。</li><li>当我们声明一个变量但没有给它赋值时，该变量的值就是undefined。当我们想要明确地表示某个变量不包含任何值时，就可以将其设置为null。</li><li>如果我们使用typeof运算符检查一个null值时，返回的结果是“object”。而如果检查一个未声明的变量时，返回的结果是undefined。</li><li>undefined不是关键字，而null是关键字</li><li>undefined本质上是window的一个属性，而null是一个对象</li></ol><p>接下来就让我们来结合一些小小的例子来进行理解：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> firval = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">let</span> secval;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(firval == secval); <span class="comment">// 输出：true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(firval === secval); <span class="comment">// 输出：false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(firval); <span class="comment">// 输出：null</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(secval); <span class="comment">// 输出：undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> firval); <span class="comment">// 输出：object</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> secval); <span class="comment">// 输出：undefined</span></span><br></pre></td></tr></table></figure><p>在上面的示例中，我们声明了两个变量firval和secval。firval的值被设置为null，而secval没有被赋值，因此它的值是undefined。当我们使用console.log()函数打印这两个变量时，分别输出了null和undefined。当我们使用typeof运算符检查这两个变量的类型时，分别输出了object和undefined,同时需要注意null与undefined本质上是不同，当使用双等时输出为true相信大家应该都有所了解，没错，因为在 JavaScript 里，双等号判断相等时会进行隐式类型转换，所以是不严格的。</p><h2 id="实际应用"><a href="#实际应用" class="headerlink" title="实际应用"></a>实际应用</h2><p>在实际的开发中，我们经常需要使用null和undefined在某些特殊的情景。例如，当我们从服务器获取数据时，如果数据不存在，我们可能会将返回值设置为null或undefined。这样做可以帮助我们更好地处理数据并避免出现错误。</p><p>以下便是一个null应用场景：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function getData() &#123;</span><br><span class="line">  let data = null;</span><br><span class="line">  // 如果数据不存在，返回null</span><br><span class="line">  if (!data) &#123;</span><br><span class="line">    return null;</span><br><span class="line">  &#125;</span><br><span class="line">  // 处理数据</span><br><span class="line">  // ...</span><br><span class="line">  // 如果处理成功，返回处理结果</span><br><span class="line">  return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在上面的示例中，我们定义了一个名为<code>getData</code>的函数，用于获取数据并处理它。如果数据不存在，我们将返回值设置为null。否则，我们将处理数据并返回处理结果。</p><p>除此之外，null还有一个前端人员都熟悉的作用:<strong>作为对象原型链的终点</strong></p><p>对于undefined的作用，这里大致列举以下几种：</p><ol><li><p>如果变量声明了，但没有赋值，它就等于undefined 。</p></li><li><p>函数中的参数没有给时，该参数就等于undefined 。</p></li><li><p>对象没有进行赋值，该属性的值为undefined。</p></li><li><p>当函数没有返回值时，默认返回undefined。</p></li></ol><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>在本文中，我们简单探讨了JavaScript中的null和undefined类型，需要记住的是，null表示一个空对象指针，而undefined表示一个未定义的值。当我们想要明确地表示某个变量不包含任何值时，就可以将其设置为null。而当我们声明一个变量但没有给它赋值时，该变量的值就是undefined。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在JavaScript中，null和undefined是两个常见的数据类型，但总是在使用时由于对两者区别不清而导致错误，今天就让我们一起来看</summary>
+      
+    
+    
+    
+    <category term="Web" scheme="https://blog.narctix.top/categories/Web/"/>
+    
+    
+    <category term="JavaScript" scheme="https://blog.narctix.top/tags/JavaScript/"/>
+    
+    <category term="web" scheme="https://blog.narctix.top/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://blog.narctix.top/posts/16107.html"/>
+    <id>https://blog.narctix.top/posts/16107.html</id>
+    <published>2023-08-05T08:39:03.048Z</published>
+    <updated>2023-08-18T07:47:13.229Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    <category term="博客" scheme="https://blog.narctix.top/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="博客" scheme="https://blog.narctix.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+</feed>
