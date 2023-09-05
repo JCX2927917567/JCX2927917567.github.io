@@ -3,158 +3,240 @@
 
 /* 调整 */
 .layout {
-    max-width: 1400px;
-    padding: 20px 15px;
+  max-width: 1400px;
+  padding: 20px 15px;
 }
 
 .recent-posts {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 
-.layout>div:first-child {
-    flex: 1;
+.layout > div:first-child {
+  flex: 1;
 }
 
 #page-header.not-top-img #nav {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 #aside-content {
-    max-width: 300px;
+  max-width: 300px;
 }
 
 .hide-aside .layout > div:first-child {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 /* 导航条样式 */
 #category-bar {
-    height: 50px;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 0;
+  height: 50px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .recent-posts #category-bar {
-    box-shadow: var(--card-box-shadow);
+  box-shadow: var(--card-box-shadow);
 }
 
 #category-bar:hover {
-    border: 1px solid #0073ff;
+  border: 1px solid #0073ff;
 }
 
 #category-bar .category-bar-items {
-    height: 100%;
-    align-items: center;
+  height: 100%;
+  align-items: center;
 }
 
 #category-bar .category-bar-items .category-bar-item a {
-    padding: 0.4rem 1rem;
+  padding: 0.4rem 1rem;
 }
 
 .category-bar-item.select a {
-    background: #0073ff;
+  background: #0073ff;
 }
 
-.category-bar-item:hover a{
-    background: #0073ff;
+.category-bar-item:hover a {
+  background: #0073ff;
 }
 
 /* 导航条在分类页面 */
 .category-in-bar {
-    align-items: center;
+  align-items: center;
 }
 
 .category-in-bar #category-bar {
-    width: 100%;
-    margin-bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
-    #category-bar {
-        border-radius: 12px;
-        border: none;
-    }
+  #category-bar {
+    border-radius: 12px;
+    border: none;
+  }
 
-    .recent-posts #category-bar {
-        box-shadow: none;
-    }
+  .recent-posts #category-bar {
+    box-shadow: none;
+  }
 }
 
 /* 分页容器 */
 nav#pagination {
-    width: 100%;
+  width: 100%;
 }
 
 /* 首页文章封面 */
 /* 描述性文字 */
-#recent-posts>.recent-post-item>.recent-post-info>.content {
-    display: -webkit-inline-box !important;
-    min-height: 3.5rem;
+#recent-posts > .recent-post-item > .recent-post-info > .content {
+  display: -webkit-inline-box !important;
+  min-height: 3.5rem;
 }
 
 a.article-meta__tags::before {
-    content: "\f292";
-    font-size: 10px;
-    opacity: .4;
-    font-family: "Font Awesome 6 Free"
+  content: "\f292";
+  font-size: 10px;
+  opacity: 0.4;
+  font-family: "Font Awesome 6 Free";
 }
 
-#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {
-    content: "" !important;
-    white-space: pre;
+#recent-posts
+  > .recent-post-item
+  > .recent-post-info
+  > .article-meta-wrap
+  > .tags:before {
+  content: "" !important;
+  white-space: pre;
 }
 
 a.article-meta__tags {
-    margin-right: 1rem;
-    font-size: 16px;
+  margin-right: 1rem;
+  font-size: 16px;
 }
 
-#recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap {
-    position: relative;
+#recent-posts > .recent-post-item > .recent-post-info > .article-meta-wrap {
+  position: relative;
 }
 
-#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .post-meta-date {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 16px;
+#recent-posts
+  > .recent-post-item
+  > .recent-post-info
+  > .article-meta-wrap
+  > .post-meta-date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 16px;
 }
 
-#recent-posts>.recent-post-item>.recent-post-info>.article-title {
-    font-size: 1.6em !important;
+#recent-posts > .recent-post-item > .recent-post-info > .article-title {
+  font-size: 1.6em !important;
 }
 
 .recent-post-info {
-    padding: 0 20px !important;
-    margin-top: 0 !important;
-    width: 100%!important;
+  padding: 0 20px !important;
+  margin-top: 0 !important;
+  width: 100% !important;
 }
 
 @media screen and (min-width: 1300px) {
-    #category #recent-posts .recent-post-item{
-        margin-top: 0.25px;
-        margin-bottom: 0.75rem;
-    }
+  #category #recent-posts .recent-post-item {
+    margin-top: 0.25px;
+    margin-bottom: 0.75rem;
+  }
 
-    #tag #recent-posts .recent-post-item{
-        margin-top: 0.25px;
-        margin-bottom: 0.75rem;
-    }
+  #tag #recent-posts .recent-post-item {
+    margin-top: 0.25px;
+    margin-bottom: 0.75rem;
+  }
 }
 
-
 @media screen and (max-width: 768px) {
-    #recent-posts > .recent-post-item >.recent-post-info {
-        padding: 20px 20px 0px;
-    }
+  #recent-posts > .recent-post-item > .recent-post-info {
+    padding: 20px 20px 0px;
+  }
 
-    #recent-posts > .recent-post-item:not(:first-child) {
-        margin:  0 0 1.25rem;
-        margin-top: 0.5rem;
-    }
+  #recent-posts > .recent-post-item:not(:first-child) {
+    margin: 0 0 1.25rem;
+    margin-top: 0.5rem;
+  }
 
-    #category #recent-posts>.recent-post-item {
-        margin-top: 0.5rem;
-    }
+  #category #recent-posts > .recent-post-item {
+    margin-top: 0.5rem;
+  }
+}
+
+/* 导航栏样式 */
+#nav #blog-info {
+  overflow: unset;
+}
+
+#toggleButton {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+#nav .site-page:not(.child):after {
+  background: transparent !important;
+}
+
+#menus a.site-page {
+  padding: 10px;
+}
+
+#menus a.site-page:hover {
+  background: #425aef;
+  border-radius: 6px;
+  color: #fff !important;
+}
+
+#menus a.site-page.child:hover i {
+  color: #fff;
+}
+
+#menus a.site-page.child:hover span {
+  color: #fff;
+}
+
+.menus_item_child li:not(#sidebar-menus li) {
+  float: left;
+  border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
+}
+.menus_item_child:not(#sidebar-menus ul) {
+  /*
+    left:calc(-150%)!important;这是估算值，为了保持元素居中的，如果不合适可以自己调
+  改为：*/
+  left: 50%;
+  translate: -50%;
+}
+
+#blog-info .site-name {
+  position: relative;
+}
+
+#blog-info .site-name:hover::after {
+  opacity: 1;
+}
+
+#blog-info .site-name:hover::after {
+  opacity: 1;
+}
+#blog-info .site-name::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  content: "\f015";
+  font-family: "Font Awesome 6 Free";
+  font-size: 18px;
+  background-color: #425aef;
+  color: #fff;
+  opacity: 0;
+  scale: 1.06;
+  border-radius: 6px;
 }
